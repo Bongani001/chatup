@@ -1,0 +1,39 @@
+.sign-in-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+
+.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color2);
+    padding: 30px 40px;
+    border-radius: 5px;
+}
+
+.sign-in.whatsup-icon {
+    height: 70px;
+    width: 70px;
+}
+
+.sign-in-header-text {
+    margin-bottom: 20px;
+}
+
+.sign-in-button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #6dcaf5;
+}
+
+.sign-in-button:hover {
+    cursor: pointer;
+    background-color: #0aaaf5;
+}

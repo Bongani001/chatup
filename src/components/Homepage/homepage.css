@@ -1,0 +1,70 @@
+.homepage {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
+
+
+/***************
+NAVIGATION
+*****************/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 10px 30px;
+    color: grey;
+}
+
+.left-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.user-avater {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.right-nav {
+    display: flex;
+    gap: 10px;
+
+}
+
+.right-icon {
+    width: 20px;
+    object-fit: cover;
+}
+
+/*******************
+MAIN
+*********************/
+
+.chat-list-search-container {
+    border-bottom: 1px solid grey;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--primary-color2);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 5px 10px;
+}
+
+.search-icon {
+    width: 20px;
+}
+
+#chat-list-search-input{
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: inherit;
+    outline: none;
+}

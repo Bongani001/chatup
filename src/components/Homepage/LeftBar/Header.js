@@ -4,7 +4,7 @@ const Header = () => {
   return (
         <nav>
             <div className='left-nav'>
-                <img className='user-avater' src={require('../../../assets/whatsup-icon.png')} alt='User profile' />
+                <img className='whatsup-logo' src={require('../../../assets/whatsup-icon.png')} alt='WhatsUP logo' />
                 <h1 className='whatsup-name'>WhatsUp</h1>
             </div>
             <div className='right-nav'>

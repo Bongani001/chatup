@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Chat from './Chat';
 
 const Chats = () => {
   return (
@@ -9,6 +10,7 @@ const Chats = () => {
                 <input type='text' id='chat-list-search-input'placeholder='Search or start new chat' />
             </div>
         </div>
+        <Chat />
     </main>
   )
 }

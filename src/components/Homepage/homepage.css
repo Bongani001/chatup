@@ -16,7 +16,7 @@ NAVIGATION
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color2);
     padding: 10px 30px;
     color: grey;
 }
@@ -118,4 +118,88 @@ CHATS-INBOX
 .inbox-app-name {
     font-size: 40px;
     margin-bottom: 20px;
+}
+
+.inbox-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+}
+
+.left-inbox-nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-image {
+    border-radius: 50%;
+    height: 30px;
+}
+
+.inbox-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.inbox-body {
+    flex: auto;
+    overflow-y: scroll;
+}
+
+.input-text {
+    background-color: var(--primary-color2);
+    padding: 20px;
+
+}
+
+.input-text > input {
+    padding: 10px;
+    width: 80%;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-text > button {
+    padding: 5px;
+}
+
+.user-messages,
+.current-user-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 5px 0px;
+}
+
+.user-messages {
+    align-items: start;
+    margin-left: 10px;
+}
+
+.current-user-messages {
+    align-items: end;
+    margin-right: 10px;
+}
+
+.user-message,
+.current-user-message {
+    background-color: var(--primary-color2);
+    color: white;
+    padding: 5px 10px;
+    max-width: 60%;
+}
+
+.user-message {
+    border-radius: 5px 5px 5px 0px;
+}
+
+.current-user-message {
+    border-radius: 5px 5px 0px 5px;
 }

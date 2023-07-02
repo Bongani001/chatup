@@ -1,8 +1,15 @@
 import React from 'react';
+import InboxNav from './InboxNav';
+import InboxBody from './InboxBody';
+import InputText from './InputText';
 
 const Inbox = () => {
   return (
-    <div>Preview</div>
+    <div className='inbox-container'>
+      <InboxNav />
+      <InboxBody />
+      <InputText />
+    </div>
   )
 }
 

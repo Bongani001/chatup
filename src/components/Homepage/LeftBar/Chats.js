@@ -11,6 +11,7 @@ const Chats = () => {
             </div>
         </div>
         <Chat />
+        <Chat />
     </main>
   )
 }

@@ -1,7 +1,8 @@
 .homepage {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    height: 100vh;
+    height: 100%;
+    background-color: white;
 }
 
 .left-bar {
@@ -17,12 +18,13 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: var(--primary-color2);
-    padding: 10px 30px;
+    padding: 10px 20px;
     color: grey;
 }
 
 .left-nav {
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
@@ -40,6 +42,16 @@ nav {
 .right-icon {
     width: 20px;
     object-fit: cover;
+}
+
+.btn {
+    padding: 5px 10px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
 }
 
 /*******************
@@ -64,6 +76,10 @@ MAIN
     width: 20px;
 }
 
+.user-inbox.search {
+    cursor: pointer;
+}
+
 #chat-list-search-input{
     width: 100%;
     padding: 5px;
@@ -80,6 +96,10 @@ MAIN
     height: 80px;
     padding: 0px 20px 0px 20px;
     gap: 10px;
+}
+
+.user-inbox:hover {
+    background-color: var(--primary-color2);
 }
 
 .user-avatar {
@@ -115,24 +135,23 @@ CHATS-INBOX
     background-color: rgb(231, 230, 230);
 }
 
-.inbox-app-name {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
 .inbox-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 13px;
     margin-bottom: 10px;
     background-color: var(--primary-color);
 }
 
-.left-inbox-nav {
+.right-inbox-nav {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+.userName {
+    color: grey;
 }
 
 .user-image {
@@ -153,21 +172,21 @@ CHATS-INBOX
 
 .input-text {
     background-color: var(--primary-color2);
-    padding: 20px;
+    padding: 15px;
 
 }
 
 .input-text > input {
     padding: 10px;
     width: 80%;
-    margin-right: 20px;
     outline: none;
     border: none;
     border-radius: 5px;
+    background-color: var(--primary-color2);
 }
 
-.input-text > button {
-    padding: 5px;
+.btn.send-message {
+    padding: 10px 20px;
 }
 
 .user-messages,
@@ -191,7 +210,7 @@ CHATS-INBOX
 .user-message,
 .current-user-message {
     background-color: var(--primary-color2);
-    color: white;
+    /* color: white; */
     padding: 5px 10px;
     max-width: 60%;
 }
@@ -202,4 +221,5 @@ CHATS-INBOX
 
 .current-user-message {
     border-radius: 5px 5px 0px 5px;
+    background-color: var(--primary-color);
 }

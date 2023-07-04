@@ -4,7 +4,7 @@ import './SignIn.css';
 import { auth, db, provider } from '../../firebase-config';
 import { signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 
 const SignIn = () => {
@@ -22,8 +22,11 @@ const SignIn = () => {
       photoURL: result.user.photoURL
     });
 
-    await setDoc(doc(db, "userChats", result.user.uid), {});
+    const res = await getDoc(doc(db, "userChats", result.user.uid))
 
+    if(!res.exists()) {
+      await setDoc(doc(db, "userChats", result.user.uid), {});
+    }
     navigate("/");
   };
 

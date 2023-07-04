@@ -92,7 +92,7 @@ MAIN
 .user-inbox {
     display: flex;
     align-items: center;
-    /* background-color: blue; */
+    cursor: pointer;
     height: 80px;
     padding: 0px 20px 0px 20px;
     gap: 10px;
@@ -139,7 +139,7 @@ CHATS-INBOX
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px;
+    padding: 10px;
     margin-bottom: 10px;
     background-color: var(--primary-color);
 }

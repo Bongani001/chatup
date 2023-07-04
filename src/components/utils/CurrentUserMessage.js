@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+// import { ChatContext } from '../../context/ChatContext';
 
-const CurrentUserMessage = () => {
+const CurrentUserMessage = ({message}) => {
+
+  const {currentUser} = useContext(AuthContext);
+  // const {data} = useContext(ChatContext);
+  
+  const owner = message.senderId === currentUser.uid;
+  
+  
+
   return (
-    <div className='current-user-message'>CurrentUserMessage dcscsdc sdcsdcsdcsd csdcsdcsdc sdcsdcsd cdcsdcs dcrcwerf wrgertg tryhyntn hnrgr brbgbrgbrtbrtgbtrg g brgb rgbr tb gb tb g</div>
+    <>
+      {owner ? (
+        <div className='current-user-message'>{message.text}</div>
+      ) : (
+        <div className='user-message'>{message.text}</div>
+      )}
+    </>
   )
+  
 }
 
-export default CurrentUserMessage
+export default CurrentUserMessage;

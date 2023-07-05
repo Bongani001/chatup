@@ -87,7 +87,7 @@ const Chats = () => {
               <img src={user.photoURL} className='user-avatar' alt="" />
               <div className='user-preview'>
                 <div className='name-time'>
-                    <div>{user.displayName}</div>
+                    <p>{user.displayName}</p>
                 </div>
               </div>
             </div>}

@@ -41,13 +41,18 @@ const InputText = () => {
     setText('');
   }
 
+  const handleKeydown = (e) => {
+    e.code === "Enter" && handleSend();
+  }
+
   return (
     <div className='input-text'>
         <input 
         type='text'
         id='current-user-text'
         value={text} 
-        placeholder='Type your message here...' 
+        placeholder='Type your message here...'
+        onKeyDown={((e) => handleKeydown(e))} 
         onChange={(e) => setText(e.target.value)}/>
         <button className="btn send-message" onClick={handleSend}>Send</button>
     </div>

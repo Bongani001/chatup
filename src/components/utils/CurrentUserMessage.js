@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
-// import { ChatContext } from '../../context/ChatContext';
 
 const CurrentUserMessage = ({message}) => {
 
   const {currentUser} = useContext(AuthContext);
-  // const {data} = useContext(ChatContext);
   
   const owner = message.senderId === currentUser.uid;
   
@@ -14,9 +12,9 @@ const CurrentUserMessage = ({message}) => {
   return (
     <>
       {owner ? (
-        <div className='current-user-message'>{message.text}</div>
+        <p className='current-user-message'>{message.text}</p>
       ) : (
-        <div className='user-message'>{message.text}</div>
+        <p className='user-message'>{message.text}</p>
       )}
     </>
   )

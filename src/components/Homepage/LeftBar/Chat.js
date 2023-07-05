@@ -39,7 +39,7 @@ const Chat = () => {
                 <div className='name-time'>
                     <div>{chat[1].userInfo.displayName}</div>
                 </div>
-                <p>{chat[1].lastMessage?.text}</p>
+                <p className='last-message'>{chat[1].lastMessage?.text}</p>
             </div>
         </div>
         )

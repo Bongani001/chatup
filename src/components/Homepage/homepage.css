@@ -7,6 +7,7 @@
 
 .left-bar {
     border-right: 1px solid rgb(201, 197, 197);
+    overflow: hidden;
 }
 
 
@@ -114,6 +115,7 @@ MAIN
     width: 100%;
     height: 100%;
     border-bottom: 1px solid var(--primary-color);
+    overflow: hidden;
 }
 
 .name-time {
@@ -121,18 +123,38 @@ MAIN
     justify-content: space-between;
 }
 
+.last-message {
+    /* max-width: 20em; */
+    font-size: 0.9rem;
+    font-style: italic;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /*******************
 CHATS-INBOX
 *********************/
 
 .inbox-preview {
-    color: grey;
-    display: flex;
+    /* color: grey; */
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 100%;
     text-align: center;
     background-color: rgb(231, 230, 230);
+}
+
+.inbox-preview-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: grey;
+    font-size: 1.5rem;
 }
 
 .inbox-nav {
@@ -168,6 +190,7 @@ CHATS-INBOX
 .inbox-body {
     flex: auto;
     overflow-y: scroll;
+    padding: 0px 10px;
 }
 
 .input-text {
@@ -189,22 +212,11 @@ CHATS-INBOX
     padding: 10px 20px;
 }
 
-.user-messages,
 .current-user-messages {
     display: flex;
     flex-direction: column;
     gap: 2px;
     padding: 5px 0px;
-}
-
-.user-messages {
-    align-items: start;
-    margin-left: 10px;
-}
-
-.current-user-messages {
-    align-items: end;
-    margin-right: 10px;
 }
 
 .user-message,
@@ -217,9 +229,11 @@ CHATS-INBOX
 
 .user-message {
     border-radius: 5px 5px 5px 0px;
+    width: fit-content;
 }
 
 .current-user-message {
     border-radius: 5px 5px 0px 5px;
     background-color: var(--primary-color);
+    align-self: self-end;
 }

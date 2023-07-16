@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
 .homepage {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -15,29 +17,9 @@
 NAVIGATION
 *****************/
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    padding: 10px 20px;
-    color: grey;
-}
-
-.left-nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.whatsup-logo {
-    width: 30px;
-    border-radius: 50%;
-}
-
-.right-nav {
-    display: flex;
-    gap: 10px;
-
+.whatsUp-name {
+    font-family: 'Lugrasimo', cursive;
+    margin: 0px;
 }
 
 .right-icon {
@@ -61,20 +43,6 @@ MAIN
 
 .chat-list-search-container {
     border-bottom: 1px solid var(--primary-color);
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: var(--primary-color);
-    border-radius: 5px;
-    margin: 20px;
-    padding: 5px 10px;
-}
-
-.search-icon {
-    width: 20px;
 }
 
 .user-inbox.search {
@@ -137,10 +105,6 @@ CHATS-INBOX
 *********************/
 
 .inbox-preview {
-    /* color: grey; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     height: 100%;
     text-align: center;
     background-color: rgb(231, 230, 230);
@@ -157,15 +121,6 @@ CHATS-INBOX
     font-size: 1.5rem;
 }
 
-.inbox-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: var(--primary-color);
-}
-
 .right-inbox-nav {
     display: flex;
     gap: 10px;
@@ -174,6 +129,7 @@ CHATS-INBOX
 
 .userName {
     color: grey;
+    font-family: 'Lugrasimo', cursive;
 }
 
 .user-image {
@@ -195,7 +151,6 @@ CHATS-INBOX
 
 .input-text {
     position: relative;
-    background-color: var(--primary-color2);
     padding: 15px;
     display: flex;
     align-items: center;
@@ -204,19 +159,6 @@ CHATS-INBOX
 .emojiPicker {
     position: absolute;
     bottom: 100%;
-}
-
-.input-text > input {
-    padding: 10px;
-    width: 80%;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--primary-color2);
-}
-
-.btn.send-message {
-    padding: 10px 20px;
 }
 
 .emojiImg {
@@ -237,8 +179,6 @@ CHATS-INBOX
 
 .user-message,
 .current-user-message {
-    background-color: var(--primary-color2);
-    /* color: white; */
     padding: 5px 10px;
     max-width: 60%;
 }
@@ -250,6 +190,5 @@ CHATS-INBOX
 
 .current-user-message {
     border-radius: 5px 5px 0px 5px;
-    background-color: var(--primary-color);
     align-self: self-end;
 }

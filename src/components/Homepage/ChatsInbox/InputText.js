@@ -19,6 +19,8 @@ const InputText = () => {
   }
 
   const handleSend = async () => {
+    if(text === "") return;
+
     await updateDoc(doc(db, "chats", data.chatId), {
       messages: arrayUnion({
         id: uuid(),
@@ -52,7 +54,7 @@ const InputText = () => {
   }
 
   return (
-    <div className='input-text'>
+    <div className='input-text gap-3 shadow-lg bg-body-secondary'>
         <img className="emojiImg" src="https://icons.getbootstrap.com/assets/icons/emoji-smile.svg" 
         alt='emoji'
         onClick={() => setShowPicker(val => !val)}/>
@@ -65,8 +67,9 @@ const InputText = () => {
             value={text} 
             placeholder='Type your message here...'
             onKeyDown={((e) => handleKeydown(e))} 
-            onChange={(e) => setText(e.target.value)}/>
-        <button className="btn send-message" onClick={handleSend}>Send</button>
+            onChange={(e) => setText(e.target.value)}
+            className='form-control'/>
+        <i className="btn btn-outline-primary bi bi-send" onClick={handleSend}></i>
     </div>
   )
 }

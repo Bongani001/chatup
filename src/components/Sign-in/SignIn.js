@@ -31,11 +31,11 @@ const SignIn = () => {
   };
 
   return (
-    <div className='sign-in-page'>
-        <div className='sign-in-container'>
-            <img className='sign-in whatsup-icon' src={require('../../assets/whatsup-icon.png')} alt='Whatsup logo' />
-            <h2 className='sign-in-header-text' >Sign in to WhatsUp</h2>
-            <button className='sign-in-button' onClick={signInWithGoogle}>Continue with Google</button>
+    <div className='sign-in-page bg-secondary-subtle'>
+        <div className='d-flex flex-column align-items-center bg-dark-subtle rounded p-3 gap-4'>
+            <img className='img-fluid' width={70} src={require('../../assets/whatsup-icon.png')} alt='Whatsup logo' />
+            <h2 className='text' >Sign in to WhatsUp</h2>
+            <button className='btn btn-primary' onClick={signInWithGoogle}>Continue with Google</button>
         </div>
         <Footer />
     </div>

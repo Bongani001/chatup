@@ -71,9 +71,9 @@ const Chats = () => {
 
   return (
     <main className='chats-section-container'>
-        <div className='chat-list-search-container'>
-            <div className='search-container'>
-                <img className='search-icon' src={require('../../../assets/search.png')} alt='Search icon'/>
+        <div className='chat-list-search-container p-3'>
+            <div className='search-container bg-secondary-subtle d-flex rounded align-items-center ps-3 p-1 gap-2'>
+                <i className='bi bi-search'></i>
                 <input 
                   type='text' 
                   id='chat-list-search-input' 

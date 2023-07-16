@@ -1,9 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 
 const CurrentUserMessage = ({message}) => {
 
   const {currentUser} = useContext(AuthContext);
+
+  const ref = useRef();
+
+  useEffect(() => {
+    ref.current?.scrollIntoView({behavior:"smooth"});
+  }, [message]);
   
   const owner = message.senderId === currentUser.uid;
   
@@ -12,9 +18,9 @@ const CurrentUserMessage = ({message}) => {
   return (
     <>
       {owner ? (
-        <p className='current-user-message'>{message.text}</p>
+        <p ref={ref} className='current-user-message bg-secondary-subtle'>{message.text}</p>
       ) : (
-        <p className='user-message'>{message.text}</p>
+        <p ref={ref} className='user-message bg-secondary'>{message.text}</p>
       )}
     </>
   )

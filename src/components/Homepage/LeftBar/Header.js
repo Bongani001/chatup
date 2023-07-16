@@ -8,16 +8,26 @@ const Header = () => {
     const {currentUser} = useContext(AuthContext);
 
   return (
-        <nav>
-            <div className='left-nav'>
-                <img className='whatsup-logo' src={require('../../../assets/whatsup-icon.png')} alt='WhatsUP logo' />
-                <h3 className='whatsup-name'>WhatsUp</h3>
-            </div>
-            <div className='right-nav'>
-                {/* <img className='right-icon plus' src={require('../../../assets/plus.png')} alt='Plus icon' />
-                <img className='right-icon kebab' src={require('../../../assets/kebab.png')} alt='Kebab icon' /> */}
-                <button className='btn logout' onClick={() => signOut(auth)}>Logout</button>
-                <img src={currentUser.photoURL} className='user-image' alt='User Avatar'/>
+        <nav className='navbar bg-secondary-subtle'>
+            <div className='container-fluid d-flex align-items-center'>
+                <div className='d-flex'>
+                    <div className='navbar-brand'>
+                        <img className='img-fluid whatsup-logo' width='30' src={require('../../../assets/whatsup-icon.png')} alt='WhatsUP logo' />
+                    </div>
+                    <h3 className='fs-6 d-flex align-items-center whatsUp-name'>WhatsUp</h3>
+                </div>
+                <div className='right-nav d-flex align-items-center gap-3'>
+                    <img src={currentUser.photoURL} className='user-image' alt='User Avatar'/>
+                    <div className='dropdown'>
+                        <i className="bi bi-gear dropdown-toggle" data-bs-toggle="dropdown" id="dropdownIcon" aria-expanded="false" style={{fontSize: '25px'}}></i>
+                        <ul className='dropdown-menu dropdown-menu-end' aria-labelledby="dropdownIcon">
+                            <li className='dropdown-item disabled'>Public Group</li>
+                            <li className='dropdown-item disabled'>Settings</li>
+                            <li><hr className="dropdown-divider" /></li>
+                            <li className='dropdown-item' onClick={() => signOut(auth)}>Logout</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
   )

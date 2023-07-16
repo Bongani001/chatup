@@ -18,7 +18,7 @@ NAVIGATION
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: var(--primary-color2);
+    background-color: var(--primary-color);
     padding: 10px 20px;
     color: grey;
 }
@@ -194,9 +194,16 @@ CHATS-INBOX
 }
 
 .input-text {
+    position: relative;
     background-color: var(--primary-color2);
     padding: 15px;
+    display: flex;
+    align-items: center;
+}
 
+.emojiPicker {
+    position: absolute;
+    bottom: 100%;
 }
 
 .input-text > input {
@@ -210,6 +217,15 @@ CHATS-INBOX
 
 .btn.send-message {
     padding: 10px 20px;
+}
+
+.emojiImg {
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.emojiImg:hover {
+    scale: 1.5;
 }
 
 .current-user-messages {

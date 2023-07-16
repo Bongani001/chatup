@@ -84,13 +84,13 @@ const Chats = () => {
             </div>
             {err && <p>User not found!</p>}
            { user && <div className='user-inbox search' onClick={handleSelect}>
-              <img src={user.photoURL} className='user-avatar' alt="" />
-              <div className='user-preview'>
-                <div className='name-time'>
-                    <p>{user.displayName}</p>
-                </div>
-              </div>
-            </div>}
+                        <img src={user.photoURL} className='user-avatar' alt="" />
+                        <div className='user-preview'>
+                          <div className='name-time'>
+                              <p>{user.displayName}</p>
+                          </div>
+                        </div>
+                      </div>}
         </div>
         <Chat />
     </main>

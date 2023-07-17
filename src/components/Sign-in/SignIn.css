@@ -6,3 +6,31 @@
     min-height: 100vh;
 }
 
+.whatsUp-logo {
+    position: relative;
+    animation: bounce 900ms infinite alternate-reverse;
+}
+
+@keyframes bounce {
+    from {
+        top: 30px;
+    }
+
+    to {
+        top: -5px;
+    }
+}
+
+.welcome {
+    animation: toggle-name 900ms infinite alternate-reverse;
+}
+
+@keyframes toggle-name {
+    from {
+        color: #ced4da;
+    }
+
+    to {
+        color: #639ff8;
+    }
+}

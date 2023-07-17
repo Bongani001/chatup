@@ -32,10 +32,10 @@ const SignIn = () => {
 
   return (
     <div className='sign-in-page bg-secondary-subtle'>
-        <div className='d-flex flex-column align-items-center bg-dark-subtle rounded p-3 gap-4'>
-            <img className='img-fluid' width={70} src={require('../../assets/whatsup-icon.png')} alt='Whatsup logo' />
-            <h2 className='text' >Sign in to WhatsUp</h2>
-            <button className='btn btn-primary' onClick={signInWithGoogle}>Continue with Google</button>
+        <div className='d-flex flex-column align-items-center bg-dark-subtle rounded p-5 gap-4'>
+            <img className='img-fluid whatsUp-logo' width={70} src={require('../../assets/whatsup-icon.png')} alt='Whatsup logo' />
+            <h2 className='fs-4 welcome'>Welcome to ChatUp</h2>
+            <button className='btn btn-primary mt-4' onClick={signInWithGoogle}>Sign in with Google</button>
         </div>
         <Footer />
     </div>

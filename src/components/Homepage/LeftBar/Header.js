@@ -14,17 +14,30 @@ const Header = () => {
                     <div className='navbar-brand'>
                         <img className='img-fluid whatsup-logo' width='30' src={require('../../../assets/whatsup-icon.png')} alt='WhatsUP logo' />
                     </div>
-                    <h3 className='fs-6 d-flex align-items-center whatsUp-name'>WhatsUp</h3>
+                    <h3 className='fs-6 d-flex align-items-center whatsUp-name'>ChatUp</h3>
                 </div>
                 <div className='right-nav d-flex align-items-center gap-3'>
                     <img src={currentUser.photoURL} className='user-image' alt='User Avatar'/>
                     <div className='dropdown'>
                         <i className="bi bi-gear dropdown-toggle" data-bs-toggle="dropdown" id="dropdownIcon" aria-expanded="false" style={{fontSize: '25px'}}></i>
                         <ul className='dropdown-menu dropdown-menu-end' aria-labelledby="dropdownIcon">
-                            <li className='dropdown-item disabled'>Public Group</li>
-                            <li className='dropdown-item disabled'>Settings</li>
+                            <li className='dropdown-item d-flex gap-2 disabled'>
+                                <i className='bi bi-people'></i>
+                                <p>Public Group</p>
+                            </li>
+                            <li className='dropdown-item d-flex gap-2 disabled'>
+                                <i className='bi bi-question-square'></i>
+                                <p>Help</p>
+                            </li>
+                            <li className='dropdown-item d-flex gap-2 disabled'>
+                                <i className='bi bi-info-square'></i>
+                                <p>Report an issue</p>
+                            </li>
                             <li><hr className="dropdown-divider" /></li>
-                            <li className='dropdown-item' onClick={() => signOut(auth)}>Logout</li>
+                            <li className='dropdown-item d-flex gap-2' onClick={() => signOut(auth)}>
+                                <i className='bi bi-box-arrow-right'></i>
+                                <p>Logout</p>
+                            </li>
                         </ul>
                     </div>
                 </div>

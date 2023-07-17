@@ -4,7 +4,7 @@ import { db } from '../../../firebase-config';
 import { v4 as uuid } from 'uuid';
 import { AuthContext } from '../../../context/AuthContext';
 import { ChatContext } from '../../../context/ChatContext';
-import EmojiPicker from 'emoji-picker-react';
+import Picker from '@emoji-mart/react';
 
 
 const InputText = () => {
@@ -14,8 +14,8 @@ const InputText = () => {
   const {currentUser} = useContext(AuthContext);
   const {data} = useContext(ChatContext);
 
-  const onEmojiClick = (emojiObject) => {
-    setText(val => val + emojiObject.emoji);
+  const onEmojiSelect= (emojiObject) => {
+    setText(val => val + emojiObject.native);
   }
 
   const handleSend = async () => {
@@ -59,7 +59,7 @@ const InputText = () => {
         alt='emoji'
         onClick={() => setShowPicker(val => !val)}/>
         <div className='emojiPicker'>
-          {showPicker && <EmojiPicker onEmojiClick={onEmojiClick}/>}
+          {showPicker && <Picker set="apple" onEmojiSelect={onEmojiSelect}/>}
         </div> 
         <input 
             type='text'

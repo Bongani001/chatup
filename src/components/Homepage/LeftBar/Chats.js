@@ -14,6 +14,7 @@ const Chats = () => {
   const {dispatch} = useContext(ChatContext);
 
   const handleSearch = async () => {
+      setErr(false);
       const q = query(collection(db, "users"), where("displayName", "==", username));
 
       try {
@@ -24,6 +25,10 @@ const Chats = () => {
       } catch(err) {
         setErr(true);
       };
+
+      if(user == null) {
+        setErr(true);
+      }
   }
 
 
@@ -66,7 +71,7 @@ const Chats = () => {
 
     setUser(null);
     setUsername('');
-
+    setErr(false);
   }
 
   return (
@@ -82,7 +87,7 @@ const Chats = () => {
                   onKeyDown={handleKey}
                   onChange={(e) => setUsername(e.target.value)} />
             </div>
-            {err && <p>User not found!</p>}
+            {(err && user == null) && <p className='text-center pt-2 text-muted'>User not found!</p>}
            { user && <div className='user-inbox search' onClick={handleSelect}>
                         <img src={user.photoURL} className='user-avatar' alt="" />
                         <div className='user-preview'>
@@ -92,7 +97,7 @@ const Chats = () => {
                         </div>
                       </div>}
         </div>
-        <Chat />
+        <Chat setUser={setUser} setErr={setErr} />
     </main>
   )
 }

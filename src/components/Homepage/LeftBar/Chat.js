@@ -4,7 +4,7 @@ import { doc, onSnapshot } from 'firebase/firestore';
 import { db } from '../../../firebase-config';
 import { ChatContext } from '../../../context/ChatContext';
 
-const Chat = () => {
+const Chat = ({ setUser, setErr }) => {
 
   const [chats, setChats] = useState([]);
 
@@ -27,6 +27,8 @@ const Chat = () => {
 
   const handleSelect = (u) => {
     dispatch({type: "CHANGE_USER", payload: u})
+    setUser(null);
+    setErr(false);
   }
 
   return (

@@ -34,9 +34,11 @@ const Header = () => {
                                 <p>Report an issue</p>
                             </li>
                             <li><hr className="dropdown-divider" /></li>
-                            <li className='dropdown-item d-flex gap-2' onClick={() => signOut(auth)}>
-                                <i className='bi bi-box-arrow-right'></i>
-                                <p>Logout</p>
+                            <li className='dropdown-item d-flex gap-2 pe-auto' onClick={() => signOut(auth)}>
+                                <button className='btn d-flex gap-2 p-0'>
+                                    <i className='bi bi-box-arrow-right'></i>
+                                    <span>Logout</span>
+                                </button>
                             </li>
                         </ul>
                     </div>

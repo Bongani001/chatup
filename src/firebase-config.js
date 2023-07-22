@@ -3,12 +3,12 @@ import { GoogleAuthProvider, getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAgsVTJqpN6UOsHrU8OUebPBEqxEDMdeII",
-  authDomain: "whatsup-0.firebaseapp.com",
-  projectId: "whatsup-0",
-  storageBucket: "whatsup-0.appspot.com",
-  messagingSenderId: "1073467632742",
-  appId: "1:1073467632742:web:ab97041bf3d4546d7e91a7"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase

@@ -13,7 +13,6 @@ const SignIn = () => {
 
   const signInWithGoogle = async () => {
     const result = await signInWithPopup(auth, provider);
-    console.log(result);
 
     await setDoc(doc(db, "users", result.user.uid), {
       uid: result.user.uid,
@@ -35,7 +34,10 @@ const SignIn = () => {
         <div className='d-flex flex-column align-items-center bg-dark-subtle rounded p-5 gap-4'>
             <img className='img-fluid whatsUp-logo' width={70} src={require('../../assets/whatsup-icon.png')} alt='Whatsup logo' />
             <h2 className='fs-4 welcome'>Welcome to ChatUp</h2>
-            <button className='btn btn-primary mt-4' onClick={signInWithGoogle}>Sign in with Google</button>
+            <button className='btn btn-primary d-flex align-items-center gap-2 mt-4 p-0 pe-2' onClick={signInWithGoogle}>
+              <img className='p-0' src={require('../../assets/google.png')} alt='Google'/>
+              <span className='fw-bold'>Sign in with Google</span>
+            </button>
         </div>
         <Footer />
     </div>

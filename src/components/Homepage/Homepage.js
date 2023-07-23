@@ -12,8 +12,8 @@ const Homepage = () => {
   const leftStyleExist = "col-4 left-bar p-0 d-none d-sm-block";
   const inboxStyleExist = "col-sm-8 chats-inbox p-0";
 
-  const leftStyleNotExist = "left-bar p-0 ";
-  const inboxStyleNotExist = "col-sm-8 chats-inbox p-0 d-none";
+  const leftStyleNotExist = "col-sm-4 left-bar p-0";
+  const inboxStyleNotExist = "col-sm-8 chats-inbox p-0 d-none d-sm-block";
 
   return (
     <div className='homepage vh-100 vw-100 container-fluid overflow-hidden p-0'>

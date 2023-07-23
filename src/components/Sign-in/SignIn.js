@@ -35,7 +35,7 @@ const SignIn = () => {
             <img className='img-fluid whatsUp-logo' width={70} src={require('../../assets/whatsup-icon.png')} alt='Whatsup logo' />
             <h2 className='fs-4 welcome'>Welcome to ChatUp</h2>
             <button className='btn btn-primary d-flex align-items-center gap-2 mt-4 p-0 pe-2' onClick={signInWithGoogle}>
-              <img className='p-0' src={require('../../assets/google.png')} alt='Google'/>
+              <img className='p-0' width={45} src={require('../../assets/google.png')} alt='Google'/>
               <span className='fw-bold'>Sign in with Google</span>
             </button>
         </div>

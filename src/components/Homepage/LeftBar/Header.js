@@ -8,8 +8,8 @@ const Header = () => {
     const {currentUser} = useContext(AuthContext);
 
   return (
-        <nav className='navbar bg-secondary-subtle'>
-            <div className='container-fluid d-flex align-items-center'>
+        <nav className='navbar bg-secondary-subtle ps-3'>
+            <div className='container-fluid d-flex align-items-center p-0 mx-2'>
                 <div className='d-flex'>
                     <div className='navbar-brand'>
                         <img className='img-fluid whatsup-logo' width='30' src={require('../../../assets/whatsup-icon.png')} alt='WhatsUP logo' />

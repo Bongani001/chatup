@@ -54,7 +54,7 @@ const InputText = () => {
   }
 
   return (
-    <div className='input-text gap-3 shadow-lg bg-body-secondary'>
+    <div className='input-text d-flex gap-3 shadow-lg bg-body-secondary p-3 me-3'>
         <img className="emojiImg" src="https://icons.getbootstrap.com/assets/icons/emoji-smile.svg" 
         alt='emoji'
         onClick={() => setShowPicker(val => !val)}/>

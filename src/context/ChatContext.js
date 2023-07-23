@@ -9,7 +9,7 @@ export const ChatContextProvider = ({ children }) => {
 
     const INITIAL_STATE = {
         chatId: "null",
-        user: {}
+        user: "null"
     }
 
     const chatReducer = (state, action) => {
@@ -18,6 +18,16 @@ export const ChatContextProvider = ({ children }) => {
                 return {
                     user: action.payload,
                     chatId: currentUser.uid > action.payload.uid ? currentUser.uid + action.payload.uid : action.payload.uid + currentUser.uid
+                }
+            case "DELETE_USER":
+                return {
+                    chatId: "null",
+                    user: action.payload
+                }
+            case "REMOVE_CHAT":
+                return {
+                    chatId: "null",
+                    user: action.payload
                 }
 
             default:

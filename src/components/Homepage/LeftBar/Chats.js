@@ -78,7 +78,7 @@ const Chats = () => {
 
   return (
     <main className='chats-section-container'>
-        <div className='chat-list-search-container p-3'>
+        <div className='chat-list-search-container p-2 me-3  ms-3'>
             <div className='search-container bg-secondary-subtle d-flex rounded align-items-center ps-3 p-1 gap-2'>
                 <i className='bi bi-search'></i>
                 <input 

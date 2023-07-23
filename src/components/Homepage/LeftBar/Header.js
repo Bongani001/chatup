@@ -19,7 +19,9 @@ const Header = () => {
                 <div className='right-nav d-flex align-items-center gap-3'>
                     <img src={currentUser.photoURL} className='user-image' alt='User Avatar'/>
                     <div className='dropdown'>
-                        <i className="bi bi-gear dropdown-toggle" data-bs-toggle="dropdown" id="dropdownIcon" aria-expanded="false" style={{fontSize: '25px'}}></i>
+                        <button className='btn py-0' data-bs-toggle="dropdown" id="dropdownIcon" aria-expanded="false">
+                            <i className="bi bi-gear" style={{fontSize: '25px'}}></i>
+                        </button>
                         <ul className='dropdown-menu dropdown-menu-end' aria-labelledby="dropdownIcon">
                             <li className='dropdown-item d-flex gap-2 disabled'>
                                 <i className='bi bi-people'></i>
@@ -34,11 +36,9 @@ const Header = () => {
                                 <p>Report an issue</p>
                             </li>
                             <li><hr className="dropdown-divider" /></li>
-                            <li className='dropdown-item d-flex gap-2 pe-auto' onClick={() => signOut(auth)}>
-                                <button className='btn d-flex gap-2 p-0'>
-                                    <i className='bi bi-box-arrow-right'></i>
-                                    <span>Logout</span>
-                                </button>
+                            <li className='dropdown-item btn d-flex gap-2' onClick={() => signOut(auth)}>
+                                <i className='bi bi-box-arrow-right'></i>
+                                <span>Logout</span>
                             </li>
                         </ul>
                     </div>

@@ -17,6 +17,7 @@ const SignIn = () => {
     await setDoc(doc(db, "users", result.user.uid), {
       uid: result.user.uid,
       displayName: result.user.displayName,
+      lowerCaseDisplayName: result.user.displayName.toLowerCase(),
       email: result.user.email,
       photoURL: result.user.photoURL
     });

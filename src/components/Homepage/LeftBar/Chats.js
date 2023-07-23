@@ -14,21 +14,23 @@ const Chats = () => {
   const {dispatch} = useContext(ChatContext);
 
   const handleSearch = async () => {
-      setErr(false);
-      const q = query(collection(db, "users"), where("displayName", "==", username));
+      setErr(true);
+      setUser(null);
+      const q = query(collection(db, "users"), where("lowerCaseDisplayName", "==", username.toLowerCase()));
 
       try {
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-          setUser(doc.data())
+          setUser(doc.data());
+          setErr(false);
         });
       } catch(err) {
         setErr(true);
       };
 
-      if(user == null) {
-        setErr(true);
-      }
+      // if(user == null) {
+      //   setErr(true);
+      // }
   }
 
 
@@ -82,7 +84,7 @@ const Chats = () => {
                 <input 
                   type='text' 
                   id='chat-list-search-input' 
-                  placeholder='Search or start new chat'
+                  placeholder='Search using full names'
                   value={username}
                   onKeyDown={handleKey}
                   onChange={(e) => setUsername(e.target.value)} />

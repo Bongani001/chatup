@@ -3,7 +3,7 @@ import CurrentUserMessages from '../../utils/CurrentUserMessages';
 
 const InboxBody = () => {
   return (
-    <div className='inbox-body overflow-auto'>
+    <div className='inbox-body'>
         <CurrentUserMessages />
     </div>
   )

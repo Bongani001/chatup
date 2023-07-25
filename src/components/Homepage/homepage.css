@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
 
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    overflow: hidden;
+}
+
 .homepage {
     background-color: white;
 }
@@ -101,6 +109,11 @@ MAIN
 CHATS-INBOX
 *********************/
 
+.chats-inbox {
+    height: 100dvh;
+    height: -webkit-fill-available;
+}
+
 .inbox-preview {
     height: 100%;
     text-align: center;
@@ -137,12 +150,14 @@ CHATS-INBOX
 .inbox-container {
     display: flex;
     flex-direction: column;
+    height: 100vh;
     height: 100dvh;
 }
 
 .inbox-body {
-    flex: auto;
+    flex: 1;
     padding: 0px 20px;
+    overflow-y: scroll;
 }
 
 .input-text {

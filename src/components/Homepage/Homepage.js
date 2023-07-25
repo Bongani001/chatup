@@ -16,7 +16,7 @@ const Homepage = () => {
   const inboxStyleNotExist = "col-sm-8 chats-inbox p-0 d-none d-sm-block";
 
   return (
-    <div className='homepage vh-100 vw-100 container-fluid overflow-hidden p-0'>
+    <div className='homepage container-fluid p-0'>
       <div className='row'>
         <div className={(data.user !== "null") ? leftStyleExist : leftStyleNotExist}>
             <Header />
